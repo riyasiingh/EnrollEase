@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>EnrollEase</title>
+        <link rel="stylesheet" href="style.css"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+            integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.10/index.global.min.css" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.10/index.global.min.js"></script>
+    </head>
+    <body>
+        <!-- Header -->
+        <header>
+            <div class="logo-section">
+                <div class="logo"><img src="\InnovGenius 2026\assets\sndtwu-new-logo.avif" width="140" height="100"></div>
+                <h2>Usha Mittal Institute of Technology</h2>
+            </div>
+
+            <div class="icons">
+                <div id="calendarBtn">
+                    <i class="fa-solid fa-calendar-days"></i>
+                    <span>Calendar</span>
+                </div>
+                <div id="notificationBtn">
+                    <i class="fa-solid fa-bell"></i>
+                    <span>Notifications</span>
+                </div>
+                <div id="assistantBtn">
+                    <i class="fa-brands fa-bots"></i>
+                    <span>Assistant</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- Navigation bar -->
+        <div class="nav-bar">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Verification</a></li>
+                <li><a href="#">Hostel</a></li>
+                <li><a href="#">Fees</a></li>
+                <li><a href="#">Support</a></li>
+            </ul>
+        </div>
+
+        <!-- Main -->
+        <main>
+            <div class="container">
+            
+                <div class="checklist-section">
+                    <h3>Admission Checklist</h3>
+                
+                    <ul class="checklist" id="checklist">
+                        <li>
+                            <input type="checkbox" id="step1">
+                            <label for="step1">Upload Documents</label>
+                        </li>
+                
+                        <li>
+                            <input type="checkbox" id="step2">
+                            <label for="step2">Complete Admission Form</label>
+                        </li>
+                
+                        <li>
+                            <input type="checkbox" id="step3">
+                            <label for="step3">Pay Fees</label>
+                        </li>
+                
+                        <li>
+                            <input type="checkbox" id="step4">
+                            <label for="step4">Attend Orientation</label>
+                        </li>
+                    </ul>
+                
+                    <div class="progress-container">
+                        <div class="progress-bar" id="progressBar"></div>
+                    </div>
+                
+                    <p id="progressText">0% Completed</p>
+                </div>
+
+            
+                <div class="verification">
+                    <div class="verification-box">
+                        <h3>Document Verification</h3>
+                
+                        <label for="documentUpload" class="upload-box">
+                            <i class="fa-solid fa-cloud-arrow-up"></i>
+                            <p>Click To Upload Document</p>
+                            <span id="fileName">No file selected</span>
+                        </label>
+                
+                        <input type="file" id="documentUpload" hidden>
+                    </div>
+                </div>
+
+            
+                <div class="model-section">
+                    <div class="model-box">
+                        <!-- 3D Model Placeholder -->
+                        <div class="sketchfab-embed-wrapper"> <iframe title="University College Anx. (Percy) - 3DBM (E,C)" frameborder="0"
+                                allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true"
+                                allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport
+                                execution-while-not-rendered web-share
+                                src="https://sketchfab.com/models/6105f99d34164ce58aa573d06984a83c/embed" height="290" width="1000"> </iframe>
+                        </div>
+                    </div>
+                </div>
+            
+            </div>
+
+            <!-- Calendar Modal -->
+            <div class="calendar-modal" id="calendarModal">
+            
+                <div class="calendar-content">
+                    <div class="calendar-header">
+                        <h3>Admission Calendar</h3>
+                        <button id="closeCalendar">&times;</button>
+                    </div>
+            
+                    <div id="calendar"></div>
+                </div>
+            
+            </div>
+
+
+            <!-- Notification Panel -->
+            <div class="notification-panel" id="notificationPanel">
+            
+                <div class="notification-header">
+                    <h3>Notifications</h3>
+                    <button id="closeNotification">&times;</button>
+                </div>
+            
+                <div class="notification-body">
+                    <div class="notification-item">📄 Document Verification Approved</div>
+                    <div class="notification-item">💳 Fee Payment Deadline: 25 Feb</div>
+                    <div class="notification-item">🎓 Orientation on 1 March</div>
+                </div>
+            
+            </div>
+
+
+            <!-- AI Chat Panel -->
+            <div class="chat-panel" id="chatPanel">
+            
+                <div class="chat-header">
+                    <h3>FreshStart AI</h3>
+                    <button id="closeChat">&times;</button>
+                </div>
+            
+                <div class="chat-body" id="chatBody">
+                    <div class="bot-message">Hello 👋 How can I help you today?</div>
+                </div>
+            
+                <div class="chat-input-area">
+                    <input type="text" id="chatInput" placeholder="Type your message..." />
+                    <button id="sendBtn">Send</button>
+                </div>
+            
+            </div>
+
+        </main>
+
+        <!-- Footer -->
+        <footer>
+            <div class="contact">
+                <h3>Contact</h3>
+                <a href="https://www.instagram.com/umit_sndtwu?utm_medium=copy_link" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://x.com/umitsndtwu/status/1465696148018974743?s=24" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="https://www.linkedin.com/company/umitsndtwu/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="https://www.youtube.com/channel/UCbTudAvyFiG7o1vTixF9tBQ" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+            <p>© 2026 EnrollEase | Usha Mittal Institute of Technology</p>
+        </footer>
+
+        <script src="script.js"></script>
+    </body>
+</html>
