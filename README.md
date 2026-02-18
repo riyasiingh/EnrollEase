@@ -50,12 +50,6 @@ This project focuses on improving student experience through a centralized digit
 * FullCalendar integration
 * Modal-based display
 
-### 🧭 Navigation Bar
-
-* Blue themed navigation bar
-* Evenly spaced links
-* Responsive layout
-
 ---
 
 ## 🛠️ Technologies Used
@@ -86,7 +80,7 @@ EnrollEase/
 ├── index.html
 ├── style.css
 ├── script.js
-└── assets/
+└── assets/sndtwu-new-logo.avif
 ```
 
 ---
